@@ -50,22 +50,22 @@ int main(int argc, char** argv)
 		hist_test2, 2, histSize, ranges, true, false);
 	normalize(hist_test2, hist_test2, 0, 1,
 		NORM_MINMAX, -1, Mat());
-	//for (int i = 0; i < 4; i++)
-	//{
-	//	int compare_method = i;
-	//	double base_base = compareHist(hist_base,
-	//		hist_base, compare_method);
-	//	double base_half = compareHist(hist_base,
-	//		hist_half_down, compare_method);
-	//	double base_test1 = compareHist(hist_base,
-	//		hist_test1, compare_method);
-	//	double base_test2 = compareHist(hist_base,
-	//		hist_test2, compare_method);
-	//	/*printf("Method [%d] Perfect,Base-Half,
-	//		Base - Test(1), Base - Test(2) :% f, % f, % f, % f \n",
-	//		i, base_base, base_half, base_test1,
-	//		base_test2);*/
-	//	cout << "Method " << i << " Perfect,Base-Half,Base-Test(1),Base-Test(2): " << base_base, base_half, base_test1, base_test2;
-	//}
+	for (int i = 0; i < 4; i++)
+	{
+		int compare_method = i;
+		double base_base = compareHist(hist_base,
+			hist_base, compare_method);
+		double base_half = compareHist(hist_base,
+			hist_half_down, compare_method);
+		double base_test1 = compareHist(hist_base,
+			hist_test1, compare_method);
+		double base_test2 = compareHist(hist_base,
+			hist_test2, compare_method);
+		/*printf("Method [%d] Perfect,Base-Half,
+			Base - Test(1), Base - Test(2) :% f, % f, % f, % f \n",
+			i, base_base, base_half, base_test1,
+			base_test2);*/
+		cout << "Method " << i << " Perfect,Base-Half,Base-Test(1),Base-Test(2): " << base_base, base_half, base_test1, base_test2;
+	}
 	return 0;
 }
